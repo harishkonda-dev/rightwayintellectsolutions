@@ -1,14 +1,19 @@
-<!-- trigger deploy -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
   <title>Rightway Intellect Solutions</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- (Optional but good for SEO) -->
+  <meta name="description"
+        content="Rightway Intellect Solutions provides IT infrastructure, IoT solutions, CCTV surveillance, automation services and manpower consulting across Tamil Nadu.">
+
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: "Segoe UI", Arial, sans-serif;
@@ -17,10 +22,10 @@
       line-height: 1.6;
     }
 
-    /* ===== HEADER ===== */
+    /* ===== HEADER + NAV ===== */
     .site-header {
       background: #0a3d62;
-      padding: 25px 20px;
+      padding: 12px 20px;
     }
 
     .header-inner {
@@ -28,26 +33,51 @@
       margin: auto;
       display: flex;
       align-items: center;
+      justify-content: space-between;
       gap: 20px;
     }
 
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
     .logo {
-      height: 70px;
+      height: 60px;
       background: #ffffff;
-      padding: 8px;
+      padding: 6px;
       border-radius: 6px;
     }
 
     .header-text h1 {
       color: #ffffff;
       margin: 0;
-      font-size: 30px;
+      font-size: 26px;
     }
 
     .header-text p {
       color: #dce9f5;
-      margin: 6px 0 0;
-      font-size: 16px;
+      margin: 4px 0 0;
+      font-size: 14px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      opacity: 0.9;
+    }
+
+    .nav-links a:hover {
+      opacity: 1;
+      text-decoration: underline;
     }
 
     /* ===== SECTIONS ===== */
@@ -92,6 +122,32 @@
       margin: 8px 0;
     }
 
+    .contact-buttons {
+      margin-top: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: #1e90ff;
+      color: #ffffff;
+    }
+
+    .btn-whatsapp {
+      background: #25D366;
+      color: #ffffff;
+    }
+
     a {
       color: #1e90ff;
       text-decoration: none;
@@ -113,18 +169,25 @@
     }
 
     /* ===== MOBILE ===== */
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       .header-inner {
         flex-direction: column;
-        text-align: center;
+        align-items: flex-start;
       }
 
+      .nav-links {
+        margin-top: 10px;
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (max-width: 600px) {
       .logo {
-        height: 60px;
+        height: 50px;
       }
 
       .header-text h1 {
-        font-size: 26px;
+        font-size: 22px;
       }
     }
   </style>
@@ -132,75 +195,103 @@
 
 <body>
 
-<!-- HEADER -->
-<header class="site-header">
-  <div class="header-inner">
-    <img src="RIS.png" alt="Rightway Intellect Solutions Logo" class="logo">
+  <!-- HEADER + NAV -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-wrap">
+        <!-- Make sure RIS.png exists in the repo root -->
+        <img src="RIS.png" alt="Rightway Intellect Solutions Logo" class="logo">
 
-    <div class="header-text">
-      <h1>Rightway Intellect Solutions</h1>
-      <p>Automate. Control. Thrive.</p>
-    </div>
-  </div>
-</header>
+        <div class="header-text">
+          <h1>Rightway Intellect Solutions</h1>
+          <p>Automate. Control. Thrive.</p>
+        </div>
+      </div>
 
-<!-- ABOUT -->
-<section>
-  <h2>About Us</h2>
-  <p>
-    Rightway Intellect Solutions is a technology-focused company delivering
-    reliable IT infrastructure, IoT-based solutions, CCTV surveillance,
-    and automation services across Tamil Nadu.
-  </p>
-  <p>
-    We help businesses simplify operations, improve visibility,
-    and achieve smarter control through modern technology.
-  </p>
-</section>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<!-- SERVICES -->
-<section>
-  <h2>Our Services</h2>
-  <div class="services">
-    <div class="service-box">
-      <strong>IoT & Fleet Management</strong><br>
-      Smart tracking and monitoring solutions for vehicles and assets.
-    </div>
-    <div class="service-box">
-      <strong>CCTV & Surveillance</strong><br>
-      Secure and scalable surveillance systems for businesses.
-    </div>
-    <div class="service-box">
-      <strong>IT Infrastructure</strong><br>
-      Networking, systems, and enterprise IT solutions.
-    </div>
-    <div class="service-box">
-      <strong>Automation Solutions</strong><br>
-      Intelligent automation for improved efficiency and control.
-    </div>
-    <div class="service-box">
-      <strong>Manpower Consulting</strong><br>
-      Skilled manpower solutions tailored to business needs.
-    </div>
-  </div>
-</section>
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      Rightway Intellect Solutions is a technology-focused company delivering
+      reliable IT infrastructure, IoT-based solutions, CCTV surveillance,
+      and automation services across Tamil Nadu.
+    </p>
+    <p>
+      We help businesses simplify operations, improve visibility,
+      and achieve smarter control through modern technology.
+    </p>
+  </section>
 
-<!-- CONTACT -->
-<section class="contact">
-  <h2>Contact Us</h2>
-  <p>Email:
-    <a href="mailto:hr@rightwayintellectsolutions.com">
-      hr@rightwayintellectsolutions.com
-    </a>
-  </p>
-  <p>Location: Tamil Nadu, India</p>
-</section>
+  <!-- SERVICES -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service-box">
+        <strong>IoT & Fleet Management</strong><br>
+        Smart tracking and monitoring solutions for vehicles and assets.
+      </div>
+      <div class="service-box">
+        <strong>CCTV & Surveillance</strong><br>
+        Secure and scalable surveillance systems for businesses.
+      </div>
+      <div class="service-box">
+        <strong>IT Infrastructure</strong><br>
+        Networking, systems, and enterprise IT solutions.
+      </div>
+      <div class="service-box">
+        <strong>Automation Solutions</strong><br>
+        Intelligent automation for improved efficiency and control.
+      </div>
+      <div class="service-box">
+        <strong>Manpower Consulting</strong><br>
+        Skilled manpower solutions tailored to business needs.
+      </div>
+    </div>
+  </section>
 
-<!-- FOOTER -->
-<footer>
-  <p>© 2025 Rightway Intellect Solutions</p>
-  <p>All Rights Reserved</p>
-</footer>
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+
+    <p>Email:
+      <a href="mailto:hr@rightwayintellectsolutions.com">
+        hr@rightwayintellectsolutions.com
+      </a>
+    </p>
+
+    <p>
+      <strong>Mobile:</strong> +91 94886 25619
+    </p>
+
+    <p>
+      <strong>Location:</strong><br>
+      117, Vaigai Colony,<br>
+      Anna Nagar,<br>
+      Madurai – 625020,<br>
+      Tamil Nadu, India
+    </p>
+
+    <div class="contact-buttons">
+      <a class="btn btn-primary" href="tel:+919488625619">Call Us</a>
+      <a class="btn btn-whatsapp" href="https://wa.me/919488625619" target="_blank">
+        WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Rightway Intellect Solutions</p>
+    <p>All Rights Reserved</p>
+  </footer>
 
 </body>
 </html>
