@@ -13,6 +13,19 @@
     html {
       scroll-behavior: smooth;
     }
+.hero {
+  max-width: 1100px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}
 
     body {
       margin: 0;
@@ -215,6 +228,25 @@
       </nav>
     </div>
   </header>
+<section class="hero">
+  <div class="hero-left">
+    <img src="hero.jpg" alt="AV and IT Solutions by Rightway Intellect Solutions">
+    <div class="hero-badge">10+ Years of Experience</div>
+  </div>
+
+  <div class="hero-text">
+    <h2>Technology Solutions That Power Smart Workplaces</h2>
+    <p>
+      Rightway Intellect Solutions delivers enterprise-grade IT infrastructure,
+      Audio-Visual solutions, Interactive Panels, CCTV surveillance, and
+      automation systems for corporates, institutions, and campuses.
+    </p>
+    <p>
+      From concept and design to integration and commissioning, we ensure
+      reliable, scalable, and future-ready technology environments.
+    </p>
+  </div>
+</section>
 
   <!-- ABOUT -->
   <section id="about">
