@@ -14,29 +14,44 @@
       line-height: 1.6;
     }
 
-    /* HEADER */
-   <header>
-  <img src="RIS.png" alt="Rightway Intellect Solutions Logo" style="height:80px;">
-  <h1>Rightway Intellect Solutions</h1>
-  <p>Automate. Control. Thrive.</p>
-</header>
+    /* ===== HEADER ===== */
+    .site-header {
+      background: #0a3d62;
+      padding: 25px 20px;
+    }
 
+    .header-inner {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
 
-    header h1 {
+    .logo {
+      height: 70px;
+      background: #ffffff;
+      padding: 8px;
+      border-radius: 6px;
+    }
+
+    .header-text h1 {
+      color: #ffffff;
       margin: 0;
-      font-size: 36px;
+      font-size: 30px;
     }
 
-    header p {
-      font-size: 18px;
-      margin-top: 10px;
+    .header-text p {
+      color: #dce9f5;
+      margin: 6px 0 0;
+      font-size: 16px;
     }
 
-    /* SECTIONS */
+    /* ===== SECTIONS ===== */
     section {
       max-width: 1100px;
       margin: 40px auto;
-      background: #fff;
+      background: #ffffff;
       padding: 40px 25px;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
@@ -49,7 +64,7 @@
       padding-left: 10px;
     }
 
-    /* SERVICES GRID */
+    /* ===== SERVICES ===== */
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -61,14 +76,15 @@
       background: #f0f5ff;
       padding: 20px;
       border-radius: 8px;
-      transition: transform 0.2s;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
     .service-box:hover {
       transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
     }
 
-    /* CONTACT */
+    /* ===== CONTACT ===== */
     .contact p {
       margin: 8px 0;
     }
@@ -79,10 +95,10 @@
       font-weight: 600;
     }
 
-    /* FOOTER */
+    /* ===== FOOTER ===== */
     footer {
       background: #0a3d62;
-      color: #fff;
+      color: #ffffff;
       text-align: center;
       padding: 20px;
       margin-top: 40px;
@@ -92,15 +108,37 @@
       margin: 5px 0;
       font-size: 14px;
     }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 600px) {
+      .header-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .logo {
+        height: 60px;
+      }
+
+      .header-text h1 {
+        font-size: 26px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-<!-- HERO SECTION -->
-<header>
-  <h1>Rightway Intellect Solutions</h1>
-  <p>Automate. Control. Thrive.</p>
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <img src="RIS.png" alt="Rightway Intellect Solutions Logo" class="logo">
+
+    <div class="header-text">
+      <h1>Rightway Intellect Solutions</h1>
+      <p>Automate. Control. Thrive.</p>
+    </div>
+  </div>
 </header>
 
 <!-- ABOUT -->
@@ -148,11 +186,12 @@
 <section class="contact">
   <h2>Contact Us</h2>
   <p>Email:
-    <a href="mailto:support@rightwayintellectsolutions.com">
+    <a href="mailto:hr@rightwayintellectsolutions.com">
       hr@rightwayintellectsolutions.com
     </a>
   </p>
- </section>
+  <p>Location: Tamil Nadu, India</p>
+</section>
 
 <!-- FOOTER -->
 <footer>
